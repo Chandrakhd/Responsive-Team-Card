@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-clr: #343b40;
+  --primary-bg: #eeeeee;
+  --secondary-clr: #959595;
+  --accent-clr: #d1bba4;
+  --white: #fff;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  font-size: 1.6rem;
+  background-color: var(--primary-bg);
+}
+
+.teams {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 9.6rem 1rem;
+
+  display: grid;
+  text-align: center;
+  gap: 6.4rem;
+}
+
+.teams_heading {
+  width: 60%;
+  margin: 0 auto;
+  display: grid;
+
+  gap: 2rem;
+}
+.teams_sub_title {
+  color: var(--white);
+  background-color: var(--accent-clr);
+  justify-self: center;
+  padding: 0.5rem 2rem;
+  border-radius: 0.4rem;
+  letter-spacing: 1px;
+}
+.teams_main_title {
+  color: var(--primary-clr);
+  font-size: 3rem;
+}
+.teams_para {
+  color: var(--secondary-clr);
+}
+.teams_cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1rem;
+}
+.card {
+  display: grid;
+
+  justify-items: center;
+  gap: 2rem;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.card:hover {
+  background-color: #d1bba4;
+
+  animation: backgroundMove 0.5s linear;
+}
+@keyframes backgroundMove {
+  0% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+.team_img {
+  width: 10rem;
+  height: 10rem;
+  position: relative;
+}
+.team_img::after {
+  content: "";
+  position: absolute;
+  bottom: 12%;
+  right: 8%;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: green;
+}
+.team_name {
+  color: var(--primary-clr);
+}
+
+.team_postition {
+  color: var(--secondary-clr);
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.team_desc {
+  color: var(--secondary-clr);
+}
+.social_icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.8rem;
+}
+
+.social_icons i {
+  background-color: #6f6559;
+  color: var(--white);
+  padding: 0.6rem;
+  font-size: 1.2rem;
+  border-radius: 50%;
+}
+.social_icons i:hover {
+  background-color: var(--accent-clr);
+}
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
